@@ -13,9 +13,9 @@ pipeline {
   stage('Deploy to Nginx') {
    steps {
     sh '''
-    sudo rm -rf /var/www/html/*
-    sudo cp -r * /var/www/html/
-    sudo systemctl restart nginx
+    rm -rf /var/www/html/*
+    cp -r * /var/www/html/
+    systemctl restart nginx
     '''
    }
   }
